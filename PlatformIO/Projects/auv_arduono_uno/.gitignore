@@ -1,14 +1,20 @@
 # ------------------------------------------------------------------------------
-# VS Code Workspace & PlatformIO Workspace-Management
+# PlatformIO Build Artefakte
 # ------------------------------------------------------------------------------
-# Lokale Workspace-Dateien – sollen NICHT ins Repo:
-workspaces/
-.vscode/
-# Falls du .code-workspace-Dateien im Projektroot erzeugst:
-*.code-workspace
+.pio/
+.pioenvs/
+.piorevenv/
+.pio/build/
+.pio/libdeps/
 
 # ------------------------------------------------------------------------------
-# System-Dateien & Editor-Müll
+# VS Code Einstellungen
+# ------------------------------------------------------------------------------
+.vscode/
+.history/
+
+# ------------------------------------------------------------------------------
+# Betriebssystem-spezifische Dateien
 # ------------------------------------------------------------------------------
 # macOS
 .DS_Store
@@ -24,49 +30,34 @@ Desktop.ini
 *~
 
 # ------------------------------------------------------------------------------
-# Logs & temporäre Dateien
-# ------------------------------------------------------------------------------
-*.log
-*.tmp
-*.swp
-*.swo
-*.bak
-*.orig
-*.save
-
-# ------------------------------------------------------------------------------
-# Python / Tools / Skripte (falls später notwendig)
+# Python/Virtual Env (falls später CI oder Tools ergänzt werden)
 # ------------------------------------------------------------------------------
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .venv/
-.env/
 env/
 ENV/
 
 # ------------------------------------------------------------------------------
-# Node.js (falls für spätere UI/Tools genutzt)
+# Logfiles & temporäre Dateien
 # ------------------------------------------------------------------------------
-node_modules/
-npm-debug.log
-yarn-error.log
+*.log
+*.tmp
+*.swp
+*.swo
 
 # ------------------------------------------------------------------------------
-# Build-Artefakte & Binary-Outputs global ignorieren
-# (plattformübergreifend, auch wenn mehrere Firmware-Projekte folgen)
+# Firmware-Binaries
 # ------------------------------------------------------------------------------
 *.bin
 *.elf
 *.hex
 
 # ------------------------------------------------------------------------------
-# Logs aus Git / Merges / Konflikten
+# Backup-Dateien aus Editoren
 # ------------------------------------------------------------------------------
-*.rej
+*.bak
 *.orig
-PlatformIO/Projects/auv_arduono_uno/include/README
-PlatformIO/Projects/auv_arduono_uno/lib/README
-PlatformIO/Projects/auv_arduono_uno/test/README
-PlatformIO/Projects/auv_arduono_uno/platformio.ini
+*.save
